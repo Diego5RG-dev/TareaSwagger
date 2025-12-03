@@ -8,23 +8,23 @@ import java.util.List;
 @Table(name = "titor")
 public class Titor {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_titor;
     private String nome;
     private String apelido;
 
-    @OneToMany(mappedBy = "fk_titor",
+    @OneToMany(mappedBy = "id_titor",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
             fetch = FetchType.EAGER)
     private List<Alumno> alumnos;
 
 
-    public List<Alumno> getPokemons() {
+    public List<Alumno> getAlumnos() {
         return alumnos;
     }
 
-    public void setPokemons(List<Alumno> alumnos) {
+    public void setAlumnos(List<Alumno> alumnos) {
         this.alumnos = alumnos;
     }
 

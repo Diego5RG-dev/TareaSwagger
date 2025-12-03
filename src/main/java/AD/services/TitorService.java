@@ -1,9 +1,8 @@
 package AD.services;
 
 
-import AD.model.Alumno;
+
 import AD.model.Titor;
-import AD.repository.AlumnoRepository;
 import AD.repository.TitorRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
