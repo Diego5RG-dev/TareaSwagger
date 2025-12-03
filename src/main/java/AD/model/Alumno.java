@@ -9,16 +9,15 @@ public class Alumno {
         private Long id_alumno;
         private String nome;
         private String apelido;
-        private Titor id_titor;
+
 
     public Alumno() {
     }
 
-    public Alumno(Long id_alumno, String nome, String apelido, Titor id_titor) {
+    public Alumno(Long id_alumno, String nome, String apelido) {
         this.id_alumno = id_alumno;
         this.nome = nome;
         this.apelido = apelido;
-        this.id_titor = id_titor;
     }
 
     public Long getId_alumno() {
@@ -45,12 +44,6 @@ public class Alumno {
         this.apelido = apelido;
     }
 
-    public Titor getId_titor() {
-        return id_titor;
-    }
 
-    public void setId_titor(Titor id_titor) {
-        this.id_titor = id_titor;
-    }
 }
 

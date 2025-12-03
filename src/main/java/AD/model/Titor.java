@@ -2,6 +2,8 @@ package AD.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "titor")
 public class Titor {
@@ -10,6 +12,22 @@ public class Titor {
     private Long id_titor;
     private String nome;
     private String apelido;
+
+    @OneToMany(mappedBy = "fk_titor",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.EAGER)
+    private List<Alumno> alumnos;
+
+
+    public List<Alumno> getPokemons() {
+        return alumnos;
+    }
+
+    public void setPokemons(List<Alumno> alumnos) {
+        this.alumnos = alumnos;
+    }
+
 
 
     public Titor() {
