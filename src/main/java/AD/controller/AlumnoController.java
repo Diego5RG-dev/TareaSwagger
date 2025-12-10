@@ -16,7 +16,6 @@ import java.util.Optional;
 public class AlumnoController {
 
     public static final String MAPPING = "/alumnos";
-
     @Autowired
     private AlumnoRepository alumnoRepository;
 
