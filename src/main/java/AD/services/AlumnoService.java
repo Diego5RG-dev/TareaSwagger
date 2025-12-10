@@ -29,5 +29,8 @@ public class AlumnoService {
     public Optional<Alumno> obterAlumnoPorId(Long id) { // Cambiado a Long
         return alumnoRepository.findById(id);
     }
+    public void eliminarAlumnoPorId(Long id) {
+        alumnoRepository.deleteById(id);
+    }
 
 }

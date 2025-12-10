@@ -30,4 +30,9 @@ public class TitorService {
     public Optional<Titor> obterTitorPorId(Long id) { // Cambiado a Long
         return titorRepository.findById(id);
     }
+
+    public void eliminarTitorPorId(Long id) {
+        titorRepository.deleteById(id);
+    }
+
 }
